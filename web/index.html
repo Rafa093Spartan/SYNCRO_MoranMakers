@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080f20">
+  <meta name="description" content="SYNCRO: prototipo académico de gestión y simulación de horarios de Moran Makers.">
+  <title>SYNCRO 2.0 | UACAM Planner · Prototipo académico</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="brandmark">S<span></span></div><div class="brand-text"><strong>SYNCRO</strong><small>UACAM Planner <span class="mini-version">2.0</span></small></div><button id="collapse-toggle" class="icon-button collapse" title="Contraer menú" aria-label="Contraer menú">☰</button></div>
+    <div class="side-label">ESPACIO DE TRABAJO</div>
+    <nav id="nav" aria-label="Navegación principal">
+      <button class="nav-item active" data-view="home"><span class="navsymbol">◈</span><span class="nav-caption">Resumen</span></button>
+      <button class="nav-item" data-view="student"><span class="navsymbol">▦</span><span class="nav-caption">Mi planificador</span></button>
+      <button class="nav-item" data-view="official"><span class="navsymbol">▤</span><span class="nav-caption">Horarios publicados</span></button>
+      <button class="nav-item" data-view="admin"><span class="navsymbol">♧</span><span class="nav-caption">Administración</span></button>
+      <button class="nav-item" data-view="stats"><span class="navsymbol">▥</span><span class="nav-caption">Estadísticas del piloto</span></button>
+    </nav>
+    <div class="sidebar-bottom"><span class="online-dot"></span> Demostración local <span class="tiny">v2.0</span><p>Información y perfiles ficticios. Sin conexión a la universidad.</p></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div class="top-left"><span class="breadcrumb">UACAM PLANNER / <b id="breadcrumb">RESUMEN</b></span></div><div class="top-right">
+      <span class="top-status"><span class="online-dot"></span> Ambiente local</span>
+      <select id="demo-student" class="profile-select" aria-label="Perfil estudiantil de demostración" title="Perfil de prueba"><option value="ALUMNO-DEMO">Alumno demo 01</option><option value="ALUMNO-DEMO-2">Alumno demo 02</option><option value="ALUMNO-DEMO-3">Alumno demo 03</option></select>
+      <div class="role-select"><label for="role">Perfil</label><select id="role"><option value="student">Estudiante</option><option value="admin">Jefatura de carrera</option><option value="school">Control Escolar</option><option value="teacher">Docente</option></select></div>
+      <button id="theme-toggle" class="icon-button" title="Cambiar tema" aria-label="Cambiar entre tema claro y oscuro">◐</button>
+      <div class="avatar">MM</div>
+    </div></header>
+    <div class="safety-banner"><span class="online-dot"></span> <strong>PROTOTIPO ACADÉMICO</strong> · Toda la información, usuarios y permisos de esta aplicación son simulados.</div>
+    <section id="content" aria-live="polite"><div class="loading">Iniciando SYNCRO 2.0…</div></section>
+    <footer class="app-footer">SYNCRO 2.0 · Moran Makers <span>Diseño de demostración · No utilizar datos personales reales.</span></footer>
+  </main>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="/app.js" defer></script>
+</body></html>

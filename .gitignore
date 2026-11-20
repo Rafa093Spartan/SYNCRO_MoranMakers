@@ -1,0 +1,19 @@
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Base de datos local
+*.db
+*.sqlite
+*.sqlite3
+
+# Configuraciones privadas
+.env
+.env.*
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db

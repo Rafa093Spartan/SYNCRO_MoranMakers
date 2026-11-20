@@ -1,0 +1,76 @@
+test_01_initial_version_and_search_data (test_syncro.TestSyncro.test_01_initial_version_and_search_data) ... [SYNCRO] 20/Nov/2026 01:25:02 "GET /api/bootstrap HTTP/1.1" 200 -
+ok
+test_02_invalid_excel_blocked (test_syncro.TestSyncro.test_02_invalid_excel_blocked) ... [SYNCRO] 20/Nov/2026 01:25:02 "POST /api/validate HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/import HTTP/1.1" 200 -
+ok
+test_03_valid_file_and_publication (test_syncro.TestSyncro.test_03_valid_file_and_publication) ... [SYNCRO] 20/Nov/2026 01:25:02 "POST /api/validate HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/import HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "GET /api/bootstrap HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/publish HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "GET /api/bootstrap HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/publish HTTP/1.1" 400 -
+ok
+test_04_plan_conflict_and_campus_warning (test_syncro.TestSyncro.test_04_plan_conflict_and_campus_warning) ... [SYNCRO] 20/Nov/2026 01:25:02 "GET /api/bootstrap HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/save-plan HTTP/1.1" 400 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/save-plan HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "GET /api/bootstrap HTTP/1.1" 200 -
+ok
+test_05_file_validation_rules (test_syncro.TestSyncro.test_05_file_validation_rules) ... ok
+test_01_extended_excel_valid_and_grouped (test_v2.TestVersion2.test_01_extended_excel_valid_and_grouped) ... [SYNCRO] 20/Nov/2026 01:25:02 "POST /api/import HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/publish HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "GET /api/bootstrap HTTP/1.1" 200 -
+ok
+test_02_multiday_sections_saved_together (test_v2.TestVersion2.test_02_multiday_sections_saved_together) ... [SYNCRO] 20/Nov/2026 01:25:02 "POST /api/import HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/publish HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "GET /api/bootstrap HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/save-plan HTTP/1.1" 400 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/save-plan HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "GET /api/bootstrap HTTP/1.1" 200 -
+ok
+test_03_generator_finds_actual_conflict_free_combinations (test_v2.TestVersion2.test_03_generator_finds_actual_conflict_free_combinations) ... [SYNCRO] 20/Nov/2026 01:25:02 "POST /api/import HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/publish HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "GET /api/bootstrap HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/suggest HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/suggest HTTP/1.1" 200 -
+ok
+test_04_profiles_and_drafts_are_independent (test_v2.TestVersion2.test_04_profiles_and_drafts_are_independent) ... [SYNCRO] 20/Nov/2026 01:25:02 "POST /api/import HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/publish HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "GET /api/bootstrap HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/save-plan HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/save-plan HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "GET /api/bootstrap?student=ALUMNO-DEMO HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "GET /api/bootstrap?student=ALUMNO-DEMO-2 HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "GET /api/bootstrap?student=ALUMNO-DEMO-3 HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/delete-plan HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "GET /api/bootstrap?student=ALUMNO-DEMO HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "GET /api/bootstrap HTTP/1.1" 200 -
+ok
+test_05_old_plans_marked_stale_after_publication (test_v2.TestVersion2.test_05_old_plans_marked_stale_after_publication) ... [SYNCRO] 20/Nov/2026 01:25:02 "POST /api/import HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/publish HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "GET /api/bootstrap HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/save-plan HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/import HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/publish HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "GET /api/bootstrap HTTP/1.1" 200 -
+ok
+test_06_cancel_and_reject_cancelled_publication (test_v2.TestVersion2.test_06_cancel_and_reject_cancelled_publication) ... [SYNCRO] 20/Nov/2026 01:25:02 "POST /api/import HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/cancel-proposal HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/publish HTTP/1.1" 400 -
+[SYNCRO] 20/Nov/2026 01:25:02 "GET /api/bootstrap HTTP/1.1" 200 -
+ok
+test_07_version_lookup_and_error (test_v2.TestVersion2.test_07_version_lookup_and_error) ... [SYNCRO] 20/Nov/2026 01:25:02 "POST /api/import HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/publish HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "GET /api/bootstrap HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "GET /api/version?id=1 HTTP/1.1" 200 -
+[SYNCRO] 20/Nov/2026 01:25:02 "GET /api/version?id=9999 HTTP/1.1" 404 -
+ok
+test_08_duplicate_row_rejected (test_v2.TestVersion2.test_08_duplicate_row_rejected) ... ok
+test_09_invalid_payload_and_student (test_v2.TestVersion2.test_09_invalid_payload_and_student) ... [SYNCRO] 20/Nov/2026 01:25:02 "POST /api/save-plan HTTP/1.1" 400 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/save-plan HTTP/1.1" 400 -
+[SYNCRO] 20/Nov/2026 01:25:02 "POST /api/suggest HTTP/1.1" 400 -
+ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.327s
+
+OK
